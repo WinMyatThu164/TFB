@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="my" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPortfolio - Software Developer & Tech Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        darkBg: '#0f172a',
+                        cardBg: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkBg text-slate-100 font-sans antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-darkBg/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold bg-gradient-to-r from-primary to-indigo-400 bg-clip-text text-transparent">
+                Dev<span class="text-white">Portfolio</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="hover:text-primary transition-colors">ပင်မစာမျက်နှာ</a>
+                <a href="#services" class="hover:text-primary transition-colors">ဝန်ဆောင်မှုများ</a>
+                <a href="#projects" class="hover:text-primary transition-colors">ပရောဂျက်များ</a>
+                <a href="#skills" class="hover:text-primary transition-colors">ကျွမ်းကျင်မှုများ</a>
+                <a href="#contact" class="bg-primary hover:bg-indigo-600 text-white px-5 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-primary/30">ဆက်သွယ်ရန်</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl text-slate-300 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 hover:text-primary">ပင်မစာမျက်နှာ</a>
+            <a href="#services" class="block py-2 hover:text-primary">ဝန်ဆောင်မှုများ</a>
+            <a href="#projects" class="block py-2 hover:text-primary">ပရောဂျက်များ</a>
+            <a href="#skills" class="block py-2 hover:text-primary">ကျွမ်းကျင်မှုများ</a>
+            <a href="#contact" class="block text-center bg-primary text-white py-2.5 rounded-lg mt-2">ဆက်သွယ်ရန်</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
+                    <i class="fa-solid fa-sparkles"></i> Welcome to my portfolio
+                </span>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                    Full-Stack <br>
+                    <span class="bg-gradient-to-r from-primary via-indigo-400 to-purple-400 bg-clip-text text-transparent">Software Engineer</span>
+                </h1>
+                <p class="text-slate-400 text-lg max-w-xl">
+                    ခေတ်မီဆန်းသစ်သော Web Applications များ၊ Mobile Apps များနှင့် Machine Learning ဖြေရှင်းချက်များကို စိတ်တိုင်းကျ ဖန်တီးတည်ဆောက်ပေးနေပါသည်။
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#projects" class="bg-primary hover:bg-indigo-600 text-white font-medium px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-primary/30 flex items-center gap-2">
+                        လက်ရာများကြည့်မည် <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="bg-cardBg hover:bg-slate-800 text-slate-200 border border-slate-700 font-medium px-8 py-3.5 rounded-xl transition-all">
+                        စကားပြောရန်
+                    </a>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-6 pt-8 border-t border-slate-800">
+                    <div>
+                        <h3 class="text-3xl font-bold text-white">၃+</h3>
+                        <p class="text-sm text-slate-400">နှစ်အတွေ့အကြုံ</p>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-white">၂၀+</h3>
+                        <p class="text-sm text-slate-400">ပြီးမြောက်သောပရောဂျက်</p>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-white">၁၀၀%</h3>
+                        <p class="text-sm text-slate-400">ဖောက်သည်ကျေနပ်မှု</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image / Illustration Box -->
+            <div class="relative flex justify-center">
+                <div class="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-2xl blur-xl opacity-30 animate-pulse"></div>
+                <div class="relative bg-cardBg border border-slate-800 p-8 rounded-2xl w-full max-w-md shadow-2xl">
+                    <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+                        <div class="flex space-x-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <span class="text-xs text-slate-500 font-mono">portfolio.js</span>
+                    </div>
+                    <pre class="text-xs sm:text-sm font-mono text-slate-300 overflow-x-auto leading-relaxed">
+<span class="text-purple-400">const</span> <span class="text-blue-400">developer</span> = {
+    name: <span class="text-green-300">"Software Engineer"</span>,
+    skills: [<span class="text-green-300">"Java"</span>, <span class="text-green-300">"Python"</span>, <span class="text-green-300">"React"</span>],
+    passion: <span class="text-green-300">"Building Apps"</span>,
+    code: <span class="text-purple-400">function</span>() {
+        <span class="text-purple-400">return</span> <span class="text-green-300">"Clean & Efficient"</span>;
+    }
+};
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-3xl sm:text-4xl font-bold">ကျွန်ုပ်တို့၏ <span class="text-primary">ဝန်ဆောင်မှုများ</span></h2>
+                <p class="text-slate-400">သင့်လုပ်ငန်းအတွက် လိုအပ်သော နည်းပညာဆိုင်ရာ ဖြေရှင်းချက်များကို တစ်နေရာတည်းတွင် ရယူနိုင်ပါသည်။</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl hover:border-primary/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Web Development</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">ခေတ်မီပြီး အသုံးပြုရလွယ်ကူသော Responsive Website များနှင့် Web Application များကို တည်ဆောက်ပေးသည်။</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl hover:border-primary/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Mobile Apps</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Android နှင့် iOS ပလက်ဖောင်းများအတွက် စွမ်းဆောင်ရည်မြင့်မားသော Mobile App များကို ရေးသားဖန်တီးပေးသည်။</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-cardBg border border-slate-800 p-8 rounded-2xl hover:border-primary/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Machine Learning / AI</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">အချက်အလက်များကို အခြေခံ၍ ကြိုတင်ခန့်မှန်းချက်များနှင့် AI ဖြေရှင်းချက်များကို အကောင်အထည်ဖော်ပေးသည်။</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <h2 class="text-3xl sm:text-4xl font-bold">ပြီးမြောက်ခဲ့သော <span class="text-primary">ပရောဂျက်များ</span></h2>
+            <p class="text-slate-400">လတ်တလော ဖန်တီးခဲ့သော ထူးခြားသည့် လက်ရာအချို့</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all">
+                <div class="h-48 bg-gradient-to-r from-blue-900 to-indigo-900 flex items-center justify-center">
+                    <i class="fa-solid fa-chart-line text-5xl text-primary/60"></i>
+                </div>
+                <div class="p-6 space-y-3">
+                    <span class="text-xs font-semibold text-primary uppercase tracking-wider">Machine Learning</span>
+                    <h3 class="text-xl font-bold">Customer Churn Prediction</h3>
+                    <p class="text-slate-400 text-sm">ဖောက်သည်များ ထွက်ခွာနိုင်မှုကို ကြိုတင်ခန့်မှန်းပေးသော စနစ် (ML Model)</p>
+                    <div class="pt-2 flex gap-2">
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded">Python</span>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded">Scikit-Learn</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all">
+                <div class="h-48 bg-gradient-to-r from-purple-900 to-pink-900 flex items-center justify-center">
+                    <i class="fa-solid fa-store text-5xl text-purple-400/60"></i>
+                </div>
+                <div class="p-6 space-y-3">
+                    <span class="text-xs font-semibold text-primary uppercase tracking-wider">E-Commerce Web</span>
+                    <h3 class="text-xl font-bold">Online Shopping Platform</h3>
+                    <p class="text-slate-400 text-sm">ပစ္စည်းများမှာယူနိုင်ပြီး စီမံခန့်ခွဲမှုစနစ်ပါဝင်သော E-Commerce ဝဘ်ဆိုဒ်</p>
+                    <div class="pt-2 flex gap-2">
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded">Java / Spring</span>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded">MySQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all">
+                <div class="h-48 bg-gradient-to-r from-emerald-900 to-teal-900 flex items-center justify-center">
+                    <i class="fa-solid fa-mobile text-5xl text-emerald-400/60"></i>
+                </div>
+                <div class="p-6 space-y-3">
+                    <span class="text-xs font-semibold text-primary uppercase tracking-wider">Mobile Application</span>
+                    <h3 class="text-xl font-bold">Android Task Manager</h3>
+                    <p class="text-slate-400 text-sm">နေ့စဉ်လုပ်ငန်းဆောင်တာများကို စနစ်တကျ မှတ်သားစီမံနိုင်သော Android App</p>
+                    <div class="pt-2 flex gap-2">
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded">Java</span>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded">Android Studio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">အသုံးပြုသည့် <span class="text-primary">နည်းပညာများ</span></h2>
+            <p class="text-slate-400 mb-12">ကျွမ်းကျင်စွာ အသုံးပြုနိုင်သော Programming Languages နှင့် Tools များ</p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-primary transition-all">
+                    <i class="fa-brands fa-java text-4xl text-orange-400"></i>
+                    <span class="font-medium text-sm">Java</span>
+                </div>
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-primary transition-all">
+                    <i class="fa-brands fa-python text-4xl text-blue-400"></i>
+                    <span class="font-medium text-sm">Python</span>
+                </div>
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-primary transition-all">
+                    <i class="fa-brands fa-html5 text-4xl text-orange-500"></i>
+                    <span class="font-medium text-sm">HTML5 / CSS</span>
+                </div>
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-primary transition-all">
+                    <i class="fa-brands fa-js text-4xl text-yellow-400"></i>
+                    <span class="font-medium text-sm">JavaScript</span>
+                </div>
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-primary transition-all">
+                    <i class="fa-brands fa-git-alt text-4xl text-red-500"></i>
+                    <span class="font-medium text-sm">Git & GitHub</span>
+                </div>
+                <div class="bg-cardBg border border-slate-800 p-6 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-primary transition-all">
+                    <i class="fa-solid fa-database text-4xl text-blue-300"></i>
+                    <span class="font-medium text-sm">MySQL / SQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-cardBg border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-xl">
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+                <h2 class="text-3xl font-bold">ဆက်သွယ်ရန်</h2>
+                <p class="text-slate-400 text-sm">ပရောဂျက်လုပ်ဆောင်ရန် သို့မဟုတ် ပူးပေါင်းဆောင်ရွက်လိုပါက မေးမြန်းနိုင်ပါသည်။</p>
+            </div>
+
+            <form class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">သင့်နာမည်</label>
+                        <input type="text" placeholder="ဥပမာ - မောင်မောင်" class="w-full bg-darkBg border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">အီးမေးလ်</label>
+                        <input type="email" placeholder="example@gmail.com" class="w-full bg-darkBg border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition-all">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">စာသား / မက်ဆေ့ချ်</label>
+                    <textarea rows="4" placeholder="ရေးသားလိုသည်များကို ဤနေရာတွင် ရေးပါ..." class="w-full bg-darkBg border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition-all"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-primary hover:bg-indigo-600 text-white font-medium px-10 py-3.5 rounded-xl transition-all shadow-lg shadow-primary/30 w-full sm:w-auto">
+                        စာပို့မည် <i class="fa-solid fa-paper-plane ml-2"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkBg border-t border-slate-800 py-8 text-center text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 DevPortfolio. All rights reserved.</p>
+            <div class="flex space-x-6 text-xl">
+                <a href="#" class="hover:text-primary transition-colors"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="hover:text-primary transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-primary transition-colors"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
